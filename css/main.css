@@ -12,9 +12,10 @@
    ========================================================================== */
 
 html {
-  color: #222;
-  font-size: 1em;
+  color: #454556;
   line-height: 1.4;
+  background:#fff;
+  font: 1rem "Roboto", sans-serif;
 }
 
 /*
@@ -87,6 +88,51 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+header, .hero {
+  background: #454556;
+  color: #cbc0ff;
+  display:flex;
+}
+h1 {
+  display:inline-block;
+  width:30%;
+  /*padding-right: 5%;*/
+
+}
+h1 a {
+  display:block;
+  
+}
+
+nav.primary {
+display: inline-block;
+  width: 70%;
+  font-size: 1.5rem;
+padding-left: 10%;
+}
+nav.primary ul {
+ display: block;
+  margin: 0;
+  padding-inline-start: 0;
+  width:100%;
+
+}
+nav.primary li {
+display: inline-block;
+  width: 25%;
+  padding: 1em 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.hero {
+  font-size: 4rem;
+
+}
+.hero p {
+  margin: 160px 0 16px 50px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -102,24 +148,21 @@ textarea {
 
 /*
  * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ * https://www.ffoodd.fr/cache-cache-css/ 
  */
 
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+ border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 /*
@@ -130,13 +173,14 @@ textarea {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
 }
 
 /*
