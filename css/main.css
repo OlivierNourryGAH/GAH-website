@@ -132,27 +132,36 @@ header, .hero {
   display:flex;
 }
 h1 {
-  display:inline-block;
-  width:calc(70% - 32px);
-  margin-left: 16px;
-
+width: 30%;
+display: inline-block;
+padding: 16px;
 }
 h1 a {
   display:block;
-  
+  /* margin: 25% 0 25% 16px;*/
+  width: 100%;
+  max-width: 270px;
 }
-
+h1 a img {
+  vertical-align: middle;
+  width: 100%;
+  display: inline-block;
+}
 nav.primary {
-  width: 70%;
+  width: 70%; 
+
 }
 nav.primary ul {
  display: block;
-  margin-right: 16px;
  font: 1rem "robotobold", sans-serif;
+ margin-block-start: 0;
+  padding-inline-start: 0;
+margin-block-end: 0;
+  margin: 5% 16px 5% 0;
 }
 
 nav.primary li {
-padding: 0.5rem 0;
+padding: 0.75rem 0;
   text-align: right;
   list-style-type: none;
 }
@@ -243,8 +252,7 @@ padding:16px;
 }
 
 .card .text {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 16px 16px 0 16px;
 }
 
 .card .text > * + * {
@@ -254,13 +262,9 @@ padding:16px;
 .card .text :last-child {
   margin-top: auto;
 }
-/*
-.card .text :nth-last-child(2) {
-  margin-bottom: 0.75rem;
-}
-*/
+
 .card {
-  /* border: 1px solid var(--sec1);*/
+
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -320,7 +324,7 @@ padding:16px;
 .graded-bkg .card {
 background-color: rgba(203, 192, 255, 1);
 }
-
+/*
 .graded-bkg .card:nth-child(1) {
 background-color: rgba(203, 192, 255, 0.25);
 }
@@ -330,7 +334,7 @@ background-color: rgba(203, 192, 255, 0.5);
 .graded-bkg .card:nth-child(3) {
 background-color: rgba(203, 192, 255, 0.75);
 }
-
+*/
 .contact-link {
 width:80%;
 margin:2rem auto;
@@ -391,6 +395,88 @@ color:var(--sec2);
 @media only screen and (min-width: 48rem) {
   /* 768px to 1023 */
 
+h1 a {
+  max-width: 360px;
+}
+nav.primary {
+  width: 70%;
+}
+nav.primary ul {
+ display: flex;
+}
+
+nav.primary li {
+padding: 0.75rem 0;
+  text-align: center;
+  flex-grow: 1;
+  max-width: 25%;
+ }
+nav.primary a {
+ text-decoration: none;
+ }
+
+
+.hero {
+  background: no-repeat white url("../img/rosace-320.png") ;
+  background-position: right ;
+  background-size: contain;
+   min-height: 320px;
+}
+.hero p {
+  font-size:3rem;
+margin: auto 16px; 
+  text-align: center;
+  width: calc(100% - 352px);
+
+}
+
+.intro {
+    padding: 0;
+  }
+.intro .container {
+  display:flex;
+}
+.intro .container-text {
+  order: 2;
+margin-right: 32px;
+}
+.intro img {
+  order:1;
+  margin: auto 0;
+  min-width: 300px;
+}
+.intro h2, .main-content h2 {
+  margin:0 ;
+  padding:24px 0;
+  font-size:1.5rem;
+}
+.intro p, .main-content p {
+  margin:0 0 24px 0;
+  font-size:1rem;
+}
+
+@supports (display: grid) {
+    .cards > ul {
+        grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));
+    }
+
+.card {
+  flex-direction: row;
+}
+.cards h3 {
+  min-width: 30%;
+  width: 30%;
+  padding: 0 16px;
+  margin: 16px 0 auto 0;
+}
+
+.contact-link {
+width:40%;
+}
+.footer-links li {
+  margin: 0 2rem;
+display: inline-block;
+}
 
 
   /* end of 768px to 1023 */
