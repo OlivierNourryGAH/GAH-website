@@ -97,7 +97,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   custom styles
    ========================================================================== */
 @font-face {
     font-family: 'GilroyExtrabold';
@@ -127,6 +127,12 @@ body {
 
 strong {
 color: var(--prim2);
+}
+header {
+      left: 0;
+    position: static;
+    top: 0;
+    z-index: 2;
 }
 header, .hero {
   background: var(--prim1);
@@ -377,12 +383,14 @@ color:var(--sec2);
 }
 
 /* ==========================================================================
-   Author's custom styles - mid width
+   custom styles - mid width
    ========================================================================== */
 
 @media only screen and (min-width: 48rem) {
   /* 768px to 1023 */
-
+header {
+   position: sticky;
+}
 h1 a {
   max-width: 360px;
 }
@@ -469,7 +477,9 @@ width:30%;
 display: inline-block;
 }
 
-
+main *:focus, footer *:focus {
+    scroll-margin-top: 16px;
+}
   /* end of 768px to 1023 */
 
 }
@@ -546,6 +556,8 @@ margin:3rem auto;
 .footer-links li {
  font-size:1.25rem;
 }
+
+
   /* end of 1024px and more */
 
 }
