@@ -121,7 +121,9 @@ textarea {
     font-style: normal;
 
 }
-
+body {
+   font-size: 1rem;
+}
 
 strong {
 color: var(--prim2);
@@ -135,10 +137,10 @@ h1 {
 width: 30%;
 display: inline-block;
 padding: 16px;
+min-width: 180px;
 }
 h1 a {
   display:block;
-  /* margin: 25% 0 25% 16px;*/
   width: 100%;
   max-width: 270px;
 }
@@ -172,16 +174,21 @@ nav.primary li a {
 
 .hero {
  font: 2rem "GilroyExtrabold", sans-serif;
-background: var(--sec2);
 
+  background: no-repeat white url("../img/rosace-320.png") ;
+  background-position: bottom right ;
+  background-size: contain;
+ /*  min-height: 320px;*/
 }
 
 
 .hero p {
-margin: 32px 16px;
+margin: 32px 16px 100% 16px;
   text-align: center;
   color: var(--prim2);
   width: 100%;
+  margin-block-start: 0;
+  padding: 16px 0 16px 0;
 }
 .intro {
   background:var(--prim2);
@@ -195,6 +202,7 @@ margin: 32px 16px;
   margin:0 ;
   padding:24px 0;
   font-size:1.25rem;
+  text-align: center;
 }
 .intro p, .main-content p {
   margin:0 0 24px 0;
@@ -252,7 +260,7 @@ padding:16px;
 }
 
 .card .text {
-  margin: 16px 16px 0 16px;
+  margin: 16px 32px 0 32px;
 }
 
 .card .text > * + * {
@@ -279,7 +287,7 @@ padding:16px;
 .offers .card {
 
     background: var(--sec1);
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -307,11 +315,7 @@ padding:16px;
   right: 0;
   bottom: 0;
 }
-/*
-.card h3:focus-within ~ .cta {
-    box-shadow: 0 0 0 0.125rem;
-}
-*/
+
 .card:focus-within h3 a:focus {
     text-decoration: none;
 }
@@ -351,24 +355,9 @@ text-decoration: none;
 }
 
 footer {
-  /*padding: 16px; */
   margin:0;
 }
-/*
-.bullets-gaming {
-  list-style-type: "\01F3AE";  
-}
-*/
 
-/*
-.email {
-  list-style-type: "\01F4E7";
-}
-.phone {
-   list-style-type: "\01F4F1";
-
-}
-*/
 .footer-links {
   text-align:center;
   margin:32px auto 16px auto;
@@ -380,8 +369,7 @@ padding-inline-start: 0;
 .footer-links li {
   text-align: center;
   margin: 0 auto;
-  font-size: 1rem;
-  padding: 16px 0;
+   padding: 16px 0;
 }
 
 .footer-links li a {
@@ -463,6 +451,9 @@ margin-right: 32px;
 .card {
   flex-direction: row;
 }
+.offers .card {
+  width: 90%;
+ }
 .cards h3 {
   min-width: 30%;
   width: 30%;
@@ -471,7 +462,7 @@ margin-right: 32px;
 }
 
 .contact-link {
-width:40%;
+width:30%;
 }
 .footer-links li {
   margin: 0 2rem;
@@ -490,8 +481,71 @@ display: inline-block;
 
 @media only screen and (min-width: 64rem) {
   /* 1024px and more */
+body {
+  font-size:1.25rem;
+}
+
+h1 a {
+  max-width: 450px;
+}
+nav.primary ul {
+  font-size: 1.5rem;
+}
+.hero {
+  background: no-repeat white url("../img/rosace-480.png") ;
+    background-position: right ;
+  background-size: contain;
+ min-height: 480px;
+}
+.hero p {
+  font-size:3rem;
+margin: auto 16px; 
+  text-align: center;
+  width: calc(100% - 512px);
+max-width: 50%;
+}
 
 
+.intro h2, .main-content h2 {
+  padding:32px 0;
+  font-size:2rem;
+}
+.intro h2 {
+  margin-top:32px;
+}
+.intro p, .main-content p {
+  margin:0 0 32px 0;
+  font-size:1.25rem;
+}
+
+.main-content .container {
+  max-width: 60rem;
+  margin: 0 auto;
+} 
+
+@supports (display: grid) {
+    .cards > ul {
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    }
+
+.card {
+  flex-direction: column;
+
+font-size:1.25rem;
+}
+.cards h3 {
+  min-width: 30%;
+min-height: 3rem;
+width:auto;
+}
+
+.contact-link {
+width:25%;
+margin:3rem auto;
+}
+.footer-links li {
+ font-size:1.25rem;
+}
   /* end of 1024px and more */
 
 }
