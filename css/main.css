@@ -91,9 +91,9 @@ textarea {
 
 :root {
   --sec2: white;
-  --sec1: #cbc0ff;
-  --prim2: #454556;
-  --prim1: #7d56ff;
+  --sec1: #cbc0ff;  /* light purple */
+  --prim2: #454556; /* slate */
+  --prim1: #7d56ff; /* purple */
 }
 
 /* ==========================================================================
@@ -123,6 +123,9 @@ textarea {
 }
 body {
    font-size: 1rem;
+}
+p {
+line-height: 1.5;
 }
 
 strong {
@@ -227,6 +230,48 @@ margin: 0 auto;
 padding:16px;
 }
 
+.tile h2, .tile h3 {
+text-align: center;
+}
+.tile h3 {
+  font-size: 1.25rem;
+  margin-top: 32px;
+}
+
+main .tile:nth-child(even) {
+ background: var(--prim2);
+ color: var(--sec2);
+}
+
+main .tile:nth-child(odd) {
+ background: var(--sec2);
+ color: var(--prim2);
+}
+
+.tile .container {
+  padding: 16px;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.tile img {
+ margin: 16px auto;
+ width:100%;
+}
+
+.bottomline h2 {
+  font-size: 2rem;
+}
+.bottomline ul {
+  list-style-type: square;
+margin-left: 16px;
+}
+.bottomline .container-text {
+  width: 100%;
+}
+.bottomline li {
+  margin-bottom: 8px;
+}
 .cards > ul {
     list-style: none;
     padding-inline-start: 0;
@@ -305,7 +350,9 @@ padding:16px;
 
 .cards h3 {
   text-align: center;
+  padding: 0 16px;
 }
+
 .card h3 a:focus {
     text-decoration: underline;
 }
@@ -352,6 +399,7 @@ padding:16px;
 background: var(--prim1);
 border-radius: 5px;
 text-align: center;
+position: relative;
 }
 .contact-link a {
 color:var(--sec2);
@@ -360,13 +408,24 @@ font-size: 1.25rem;
 text-decoration: none;
 }
 
+.contact-link a::after {
+
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
 footer {
   margin:0;
 }
 
 .footer-links {
   text-align:center;
-  margin:32px auto 16px auto;
+  margin:0 auto 16px auto;
 background: var(--prim1);
 padding-inline-start: 0;
   margin-block-end: 0;
@@ -449,6 +508,44 @@ margin-right: 32px;
 .intro p, .main-content p {
   margin:0 0 24px 0;
   font-size:1rem;
+}
+
+.tile .container {
+  display:flex;
+  flex-direction:row;
+}
+
+.tile img {
+height: fit-content;
+margin: 88px 0 auto 0;
+    min-width: 50%;
+  }
+
+.tile .container-text {
+padding:16px;  
+}
+
+main .tile:nth-child(even) .container-text {
+order:1;
+}
+
+main .tile:nth-child(even) img {
+order:2;
+}
+main .tile:nth-child(odd) .container-text {
+order:2;
+}
+
+main .tile:nth-child(odd) img {
+order:1;
+}
+
+.tile .contact-link {
+  width:50%;
+}
+
+.bottomline ul {
+  margin-left:20%;
 }
 
 @supports (display: grid) {
