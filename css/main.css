@@ -223,7 +223,9 @@ margin: 0 auto;
   width: 100%;
 }
 
-
+.intro .container {
+  padding: 16px;
+}
 
 .main-content {
    background:var(--sec2);
@@ -232,7 +234,7 @@ margin: 0 auto;
 padding:16px;
 }
 
-.tile h2, .tile h3 {
+.tile h2  {
 text-align: center;
 }
 .tile h3 {
@@ -255,12 +257,23 @@ main .tile:nth-child(odd) {
   max-width: 60rem;
   margin: 0 auto;
 }
+main .tile:nth-child(even) .container-text {
+padding-right: 32px;
+}
+
+main .tile:nth-child(odd) .container-text {
+padding-left: 32px;
+}
 
 .tile img {
  margin: 16px auto;
  width:100%;
+ border-radius: 0.5rem;
+ box-shadow: 4px 4px 4px var(--prim2);
 }
-
+.tile:nth-child(even) img {
+ box-shadow: 4px 4px 4px black;
+}
 .bottomline h2 {
   font-size: 2rem;
 }
@@ -475,6 +488,9 @@ display: inline-block;
 width: calc(100% - 186px);
 }
 
+.member .credentials p {
+  margin: 0 0 16px 0;
+}
 .member {
   margin-bottom:32px;
 }
@@ -493,7 +509,9 @@ width: calc(100% - 186px);
 .member img.picture {
 display:inline-block;
   margin-top: -32px;
-
+border: 6px var(--prim1) solid;
+  border-radius: 50%;
+  
 }
 .member .text {
   margin-top: 16px;
@@ -510,6 +528,11 @@ display:inline-block;
 }
 .member .games {
 padding-left:32px;
+}
+
+.gform {
+  width: fit-content;
+  margin: 0 auto;
 }
 /* ==========================================================================
    custom styles - mid width
@@ -649,9 +672,9 @@ main *:focus, footer *:focus {
 }
 */
 .identity.intro img {
-  margin: 2rem 16px;
-  width: 60%;
-max-width: 360px;
+margin: auto 32px auto 16px;
+    width: 40%;
+    max-width: 360px;
 }
 
 .team .member {
@@ -660,7 +683,7 @@ margin-bottom: 32px;
 }
 .team .member .credentials {
 margin-left: 16px;
-    width: 30%;
+    width: calc(30% - 12px);
     vertical-align: top;
 }
 .team .member .picture {
@@ -674,7 +697,9 @@ margin-left: 32px;
     display: inline-block;
     width: calc(70% - 224px);
 }
-
+.member .credentials p {
+  margin: 0 0 16px 0;
+}
   /* end of 768px to 1023 */
 }
 
