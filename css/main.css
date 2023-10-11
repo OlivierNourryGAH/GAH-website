@@ -795,7 +795,7 @@ main *:focus, footer *:focus {
 .identity.intro img {
 margin: auto 2rem;
   flex: 1.5;
-  max-width: none;
+  max-width: 240px;
 }
 
 
