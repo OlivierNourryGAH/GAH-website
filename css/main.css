@@ -97,6 +97,7 @@ textarea {
   --sec1: #cbc0ff;  /* light purple */
   --prim2: #454556; /* slate */
   --prim1: #7d56ff; /* purple */
+  --margin: #aa7ffd ; /* hero image border */
 }
 
 /* ==========================================================================
@@ -172,16 +173,12 @@ header > div {
  margin: 0 auto;
 }
 h1 {
+/*
 flex: 1 120px;
   padding-left: 16px;
 display: flex;
-
-/* 
-width: 40%;
-  display: block;
-  min-width: 120px;
-  max-width: 180px;
-  */
+*/
+  display:block;
 }
 h1 a {
 display: flex;
@@ -195,9 +192,7 @@ h1 a img {
 }
 nav.primary {
   flex: 4;
-/*
- width: 60%;
-*/
+
 background: var(--prim1);
 }
 nav.primary ul {
@@ -227,15 +222,15 @@ nav.primary li a {
   display:flex;
  font: 2rem "GilroyExtrabold", sans-serif;
 
-  background: no-repeat var(--sec2) url("../img/rosace-320.png") ;
+  background: no-repeat var(--sec2) url("../img/rosace-320.jpg") ;
   background-position: bottom right ;
   background-size: contain;
-max-width:90rem;
+max-width:120rem;
 margin: 0 auto;
 }
 
 
-.hero p {
+.hero p, .hero h1 {
 margin: 16px 16px 100% 16px;
   text-align: center;
   color: var(--prim2);
@@ -451,17 +446,7 @@ margin-left: 16px;
 .graded-bkg .card {
 background-color: rgba(203, 192, 255, 1);
 }
-/*
-.graded-bkg .card:nth-child(1) {
-background-color: rgba(203, 192, 255, 0.25);
-}
-.graded-bkg .card:nth-child(2) {
-background-color: rgba(203, 192, 255, 0.5);
-}
-.graded-bkg .card:nth-child(3) {
-background-color: rgba(203, 192, 255, 0.75);
-}
-*/
+
 .contact-link {
 width:80%;
 margin:2rem auto;
@@ -665,12 +650,12 @@ nav.primary a {
 
 
 .hero, .p404 .hero {
-  background: no-repeat white url("../img/rosace-320.png") ;
+  background: no-repeat var(--sec2) url("../img/rosace-320.jpg") ;
   background-position: right ;
   background-size: contain;
    min-height: 320px;
 }
-.hero p {
+.hero p, .hero h1 {
   font-size:3rem;
 margin: auto 16px; 
   text-align: center;
@@ -843,12 +828,12 @@ nav.primary ul {
   font-size: 1.5rem;
 }
 .hero, .p404 .hero {
-  background: no-repeat white url("../img/rosace-480.png") ;
+  background: no-repeat var(--sec2) url("../img/rosace-480c.jpg") ;
     background-position: right ;
   background-size: contain;
  min-height: 480px;
 }
-.hero p {
+.hero p, .hero h1 {
   font-size:3rem;
 margin: auto 16px; 
   text-align: center;
@@ -881,24 +866,7 @@ max-width: 50%;
     max-width: 60rem;
     margin: 0 auto;
 } 
-/*
-@supports (display: grid) {
-    .cards > ul {
-        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-    }
 
-.card {
-  flex-direction: column;
-
-font-size:1.25rem;
-}
-.cards h3 {
-  min-width: 30%;
-min-height: 3rem;
-width:auto;
-}
-}
-*/
 .contact-link {
 width:25%;
 margin:3rem auto;
@@ -963,7 +931,7 @@ margin:3rem auto;
   /* 2400px and more */
 
 .hero-container {
-  background:  var(--prim1) ;
+  background:   var(--prim1) ;
 }
 
   /* end of 2400px and more */
@@ -998,7 +966,7 @@ margin:3rem auto;
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
-  white-space: nowrap !important;
+  var(--sec2)-space: nowrap !important;
 }
 
 /*
@@ -1016,7 +984,7 @@ margin:3rem auto;
   margin: auto !important;
   overflow: visible !important;
   width: auto !important;
-  white-space: normal !important;
+  var(--sec2)-space: normal !important;
 }
 
 /*
@@ -1098,7 +1066,7 @@ margin:3rem auto;
   }
 
   pre {
-    white-space: pre-wrap !important;
+    var(--sec2)-space: pre-wrap !important;
   }
 
   pre,
