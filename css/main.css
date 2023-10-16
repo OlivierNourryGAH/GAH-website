@@ -172,12 +172,13 @@ header > div {
  max-width: 90rem;
  margin: 0 auto;
 }
+header h1 {
+  width:50%;
+  margin-left:16px;
+  max-width: 240px;
+}
 h1 {
-/*
-flex: 1 120px;
-  padding-left: 16px;
-display: flex;
-*/
+
   display:block;
 }
 h1 a {
